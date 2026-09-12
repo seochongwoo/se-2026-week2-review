@@ -10,14 +10,23 @@ public class Example {
     }
 
     public String reverse(String str, List<String> list) {
-        if(list == null)
+        //str 부분에 null이 들어올 경우를 대비하기 위한 코드.
+        if (str == null) {
+        return null;
+    }
+
+
+        if(list == null){
             list = new ArrayList<>();
-        if (str.length() < 0) {  
+        }
+
+        //문자열 길이의 값은 음수일 수 없다.
+        if (str.length() == 0) {  
             StringBuffer sb = new StringBuffer();
             for (String s : list) {
                 sb.append(s);
             }
-            return sb.toString();          
+            return sb.toString();         
             
         }
         list.add(str.substring(str.length()-1));
