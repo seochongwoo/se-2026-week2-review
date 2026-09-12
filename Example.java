@@ -13,7 +13,7 @@ public class Example {
         //str 부분에 null이 들어올 경우를 대비하기 위한 코드.
         if (str == null) {
         return null;
-    }
+        }
 
 
         if(list == null){
